@@ -4,7 +4,7 @@ class CashRegister
 
   #@items = []
 
-  def initialize(discount = 0.0)
+  def initialize(discount = 1.0)
     @total = 0.0;
     @discount = discount;
     @items = []
