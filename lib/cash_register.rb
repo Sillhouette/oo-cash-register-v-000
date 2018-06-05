@@ -16,9 +16,11 @@ class CashRegister
   end
 
   def apply_discount
-    @total *= @discount / 100;
-    @discount == 0.0 ? "There is not discount to apply." :
-                       "Your new discount is #{@total}";
+    if @discount == 0.0
+      "There is not discount to apply."
+    else
+      @total *= @discount / 100;
+      "Your new discount is #{@total}";
 
   end
 
