@@ -19,7 +19,7 @@ class CashRegister
     if @discount == 0.0
       "There is not discount to apply."
     else
-      discount_total = @total *= @discount / 100.0;
+      discount_total = @total * @discount / 100.0;
       @total -= discount_total;
       "Your new discount is #{@total}";
     end
