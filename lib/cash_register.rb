@@ -21,7 +21,7 @@ class CashRegister
     else
       @total *= @discount / 100;
       "Your new discount is #{@total}";
-
+    end
   end
 
 end
