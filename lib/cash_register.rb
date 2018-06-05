@@ -4,7 +4,7 @@ class CashRegister
 
   #@items = []
 
-  def initialize(discount = 0)
+  def initialize(discount = 0.0)
     @total = 0.0;
     @discount = discount;
     @items = []
@@ -13,6 +13,13 @@ class CashRegister
   def add_item(item, price, quantity = 1)
     quantity > 1 ? quantity.times{@items << item} : @items << item; 
     @total += price * quantity;
+  end
+
+  def apply_discount
+    @total *= @discount;
+    @discount == 0.0 ? "There is not discount to apply." :
+                       "Your new discount is #{@total}";
+    
   end
 
 end
