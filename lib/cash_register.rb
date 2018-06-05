@@ -19,6 +19,7 @@ class CashRegister
     if @discount == 0.0
       "There is not discount to apply."
     else
+      puts 20/100
       @total *= @discount / 100;
       "Your new discount is #{@total}";
     end
