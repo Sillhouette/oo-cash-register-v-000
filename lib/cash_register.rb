@@ -27,7 +27,7 @@ class CashRegister
 
   def void_last_transaction
     last_transaction[2] > 1 ? last_transaction[2].times{@items.pop} : @items.pop;
-    @total -= price * quantity;
+    @total -= last_transaction[1] * last_transaction[2];
     last_transaction = [];
   end
 end
