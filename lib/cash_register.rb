@@ -6,7 +6,7 @@ class CashRegister
 
   def initialize(discount = 0.0)
     @total = 0.0;
-    @discount = discount / 100;
+    @discount = discount;
     @items = []
   end
 
@@ -16,7 +16,7 @@ class CashRegister
   end
 
   def apply_discount
-    @total *= @discount;
+    @total *= @discount / 100;
     @discount == 0.0 ? "There is not discount to apply." :
                        "Your new discount is #{@total}";
 
